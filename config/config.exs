@@ -2,6 +2,15 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+config :najdira_cerbo, NajdiraCerbo.Repo,
+  database: System.get_env["db_db"],
+  username: System.get_env["db_user"],
+  password: System.get_env["db_pass"],
+  hostname: System.get_env["db_host"],
+  ssl: true
+
+config :najdira_cerbo, ecto_repos: [NajdiraCerbo.Repo]
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,
