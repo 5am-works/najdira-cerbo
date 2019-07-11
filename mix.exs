@@ -22,6 +22,7 @@ defmodule NajdiraCerbo.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
       {:ecto, "~> 3.1"},
       {:ecto_sql, "~> 3.1"},
       {:postgrex, "~> 0.14.3"},
